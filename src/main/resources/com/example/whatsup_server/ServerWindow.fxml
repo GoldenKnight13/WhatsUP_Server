@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<!--Server log container-->
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.whatsup_server.ServerController"
+            fx:id = "server_window"
+            prefWidth="475.0" prefHeight="400.0">
+
+
+    <Label layoutX="180" layoutY="30" text="Server Log">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="23"/>
+        </font>
+    </Label>
+
+    <!--Container of the log entries-->
+    <ScrollPane fx:id="Log"  layoutX="30" layoutY="70" prefHeight="256" prefWidth="418"
+                fitToWidth="true">
+
+        <!--Log entry-->
+        <content>
+            <VBox fx:id="logRecord" prefWidth="400" prefHeight="250"/>
+        </content>
+
+    </ScrollPane>
+
+    <!--Buttons to stop or restart the server-->
+    <Button fx:id="start_button" layoutX="250" layoutY="350" text="Start server"/>
+    <Button fx:id="stop_button" layoutX="350" layoutY="350" text="Stop server"/>
+
+</AnchorPane>
